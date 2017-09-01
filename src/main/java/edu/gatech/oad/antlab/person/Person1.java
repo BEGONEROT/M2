@@ -35,7 +35,7 @@ public class Person1 {
 		} else if (input.length() == 1 || input.length() == 2) {
 			return input;
 		} else {
-			return substring(2, input.length()) + substring(0, 2);
+			return input.substring(2, input.length()) + input.substring(0, 2);
 		}
 	}
 	
