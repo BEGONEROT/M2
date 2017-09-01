@@ -1,7 +1,13 @@
+defaultTasks    'jar'
+
 apply plugin: 'java'
 
 description = 'AntLabGradle'
 version = '1.0'
+
+repositories {
+   mavenCentral()
+}
 
 jar {
     manifest {
@@ -15,6 +21,11 @@ copy { //copies and translates contents of resources.jar
    into("src/main/java")
 }
 
-/*compileJava {
+compileJava {
     source = 'src/main/java'
+    destinationDir = file('build/tmp/compileJava')
+}
+
+/*compileTest (type: JavaCompile) {
+
 }*/
