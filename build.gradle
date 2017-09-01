@@ -11,7 +11,7 @@ repositories {
 
 jar {
     manifest {
-        attributes 'Main-Class': 'java.edu.gatech.oad.antlab.pkg1.AntLabMain' //specifies main file of the project
+        attributes 'Main-Class': 'edu.gatech.oad.antlab.pkg1.AntLabMain' //specifies main file of the project
         attributes 'Class-Path': 'lib/resources.jar' //shows the program where the resources are
     }
 }
@@ -28,4 +28,9 @@ compileJava {
 
 /*compileTest (type: JavaCompile) {
 
-}*/
+}
+
+javadoc {
+
+}
+*/
