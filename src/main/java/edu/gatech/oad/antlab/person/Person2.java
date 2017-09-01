@@ -37,6 +37,7 @@ public class Person2 {
 			return input;
 		} else {
 			return input.substring(2, input.length()) + input.substring(0, 2);
+        }
 	}
 	/**
 	 * Return a string rep of this object
