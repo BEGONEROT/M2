@@ -1,0 +1,20 @@
+apply plugin: 'java'
+
+description = 'AntLabGradle'
+version = '1.0'
+
+jar {
+    manifest {
+        attributes 'Main-Class': 'java.edu.gatech.oad.antlab.pkg1.AntLabMain' //specifies main file of the project
+        attributes 'Class-Path': 'lib/resources.jar' //shows the program where the resources are
+    }
+}
+
+copy { //copies and translates contents of resources.jar
+   from(zipTree("lib/resources.jar")) 
+   into("src/main/java")
+}
+
+/*compileJava {
+    source = 'src/main/java'
+}*/
