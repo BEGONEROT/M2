@@ -31,13 +31,7 @@ public class Person2 {
 	 */
 	private String calc(String input) {
 	  //Person 2 put your implementation here
-      if (input.length() == 0) {
-			return "";
-		} else if (input.length() == 1 || input.length() == 2) {
-			return input;
-		} else {
-			return input.substring(2, input.length()) + input.substring(0, 2);
-        }
+	  return null;
 	}
 	/**
 	 * Return a string rep of this object
