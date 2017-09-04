@@ -11,8 +11,8 @@ repositories {
 
 jar {
     manifest {
-        attributes 'Main-Class': 'edu.gatech.oad.antlab.pkg1.AntLabMain' //specifies main file of the project
-        attributes 'Class-Path': 'lib/resources.jar' //shows the program where the resources are
+        attributes 'Main-Class': 'edu.gatech.oad.antlab.pkg1.AntLabMain', //specifies main file of the project
+            'Class-Path': 'lib/resources.jar' //shows the program where the resources are
     }
 }
 
@@ -22,9 +22,19 @@ copy { //copies and translates contents of resources.jar
 }
 
 compileJava {
+    copy { //copies and translates contents of resources.jar
+       from(zipTree("lib/resources.jar")) 
+       into("src/main/java")
+    }
     source = 'src/main/java'
     destinationDir = file('build/tmp/compileJava')
 }
+
+dependencies {
+    compile group: 'org.hibernate', name: 'hibernate-core', version: '3.6.7.Final'
+      testCompile group: 'junit', name: 'junit', version: '4.+'
+}
+
 
 /*compileTest (type: JavaCompile) {
 
