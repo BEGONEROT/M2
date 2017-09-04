@@ -1,6 +1,9 @@
+apply plugin: 'java'
+apply plugin: 'application'
+
 defaultTasks    'jar'
 
-apply plugin: 'java'
+mainClassName = 'edu.gatech.oad.antlab.pkg1.AntLabMain'
 
 description = 'AntLabGradle'
 version = '1.0'
@@ -9,10 +12,11 @@ repositories {
    mavenCentral()
 }
 
+
 jar {
     manifest {
-        attributes 'Main-Class': 'edu.gatech.oad.antlab.pkg1.AntLabMain', //specifies main file of the project
-            'Class-Path': 'lib/resources.jar' //shows the program where the resources are
+        attributes('Main-Class': 'edu.gatech.oad.antlab.pkg1.AntLabMain',
+            'Class-Path': 'lib/resources.jar')
     }
 }
 
@@ -21,14 +25,14 @@ copy { //copies and translates contents of resources.jar
    into("src/main/java")
 }
 
-compileJava {
+/*compileJava {
     copy { //copies and translates contents of resources.jar
        from(zipTree("lib/resources.jar")) 
        into("src/main/java")
     }
     source = 'src/main/java'
     destinationDir = file('build/tmp/compileJava')
-}
+}*/
 
 dependencies {
     compile group: 'org.hibernate', name: 'hibernate-core', version: '3.6.7.Final'
