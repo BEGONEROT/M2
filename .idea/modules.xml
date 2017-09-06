@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/M2-Clone.iml" filepath="$PROJECT_DIR$/M2-Clone.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/M2-Clone_main.iml" filepath="$PROJECT_DIR$/.idea/modules/M2-Clone_main.iml" group="M2-Clone" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/M2-Clone_test.iml" filepath="$PROJECT_DIR$/.idea/modules/M2-Clone_test.iml" group="M2-Clone" />
+    </modules>
+  </component>
+</project>
